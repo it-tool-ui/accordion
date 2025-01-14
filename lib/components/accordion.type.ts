@@ -11,5 +11,8 @@ export interface AccordionProps {
   variant?: AccordionType;
   selectMode?: SelectMode;
   className?: string;
+  itemClassName?: string;
+  headerClassName?: string;
+  contentClassName?: string;
   children: React.ReactNode;
 }

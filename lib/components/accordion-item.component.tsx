@@ -9,7 +9,14 @@ const AccordionItem: React.FC<AccordionItemProps> = ({
   title,
   children,
 }) => {
-  const { variant, openingItems, toggleItem } = useContext(AccordionContext);
+  const {
+    variant,
+    itemClassName,
+    headerClassName,
+    contentClassName,
+    openingItems,
+    toggleItem,
+  } = useContext(AccordionContext);
 
   const contentRef = useRef<HTMLDivElement | null>(null);
   const contentHeight = useRef<number>(0);
@@ -30,12 +37,19 @@ const AccordionItem: React.FC<AccordionItemProps> = ({
 
   return (
     <div
-      className={cn("group", {
-        "rounded-md border border-neutral-200 px-2 shadow-sm":
-          variant === "splitted",
-      })}
+      className={cn(
+        "group",
+        {
+          "rounded-md border border-neutral-200 px-2 shadow-sm":
+            variant === "splitted",
+        },
+        itemClassName
+      )}
     >
-      <div className="flex cursor-pointer py-2" onClick={() => toggleItem(id)}>
+      <div
+        className={cn("flex cursor-pointer py-2", headerClassName)}
+        onClick={() => toggleItem(id)}
+      >
         <div className="mr-2 flex flex-1 text-lg font-medium">{title}</div>
         <ChevronLeftIcon
           className={cn(
@@ -47,7 +61,8 @@ const AccordionItem: React.FC<AccordionItemProps> = ({
       <div
         className={cn(
           "transform overflow-hidden py-0 opacity-0 transition-all duration-300",
-          { "py-2 opacity-100": opening }
+          { "py-2 opacity-100": opening },
+          contentClassName
         )}
         style={{
           height: opening ? `${contentHeight.current + 16}px` : 0,

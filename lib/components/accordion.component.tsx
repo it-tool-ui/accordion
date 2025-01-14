@@ -7,6 +7,9 @@ const Accordion: React.FC<AccordionProps> = ({
   variant = "light",
   selectMode = "single",
   className,
+  itemClassName,
+  headerClassName,
+  contentClassName,
   children,
 }) => {
   const [openingItems, setOpeningItems] = useState<string[]>([]);
@@ -23,7 +26,16 @@ const Accordion: React.FC<AccordionProps> = ({
   };
 
   return (
-    <AccordionContext.Provider value={{ variant, openingItems, toggleItem }}>
+    <AccordionContext.Provider
+      value={{
+        variant,
+        itemClassName,
+        headerClassName,
+        contentClassName,
+        openingItems,
+        toggleItem,
+      }}
+    >
       <div
         className={clsx(
           {

@@ -3,6 +3,9 @@ import { AccordionType } from "./accordion.type";
 
 interface ContextProps {
   variant: AccordionType;
+  itemClassName?: string;
+  headerClassName?: string;
+  contentClassName?: string;
   openingItems: string[];
   toggleItem: (key: string) => void;
 }
