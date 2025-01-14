@@ -1,12 +1,12 @@
 {
-  "name": "@it-tool-ui/button",
-  "version": "1.0.6",
+  "name": "@it-tool-ui/accordion",
+  "version": "1.0.1",
   "license": "MIT",
   "author": {
     "name": "Nguyen Dinh Truong",
     "email": "nguyendinhtruong98@gmail.com"
   },
-  "description": "UI Button Component with React & Typescript with TailwindCSS",
+  "description": "UI Accordion Component with React & Typescript with TailwindCSS",
   "type": "module",
   "main": "./dist/index.umd.js",
   "module": "./dist/index.es.js",
@@ -67,10 +67,10 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/it-tool-ui/button.git"
+    "url": "git+https://github.com/it-tool-ui/accordion.git"
   },
   "bugs": {
-    "url": "https://github.com/it-tool-ui/button/issues"
+    "url": "https://github.com/it-tool-ui/accordion/issues"
   },
-  "homepage": "https://it-tool.app/button"
+  "homepage": "https://it-tool.app/accordion"
 }

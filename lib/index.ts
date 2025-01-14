@@ -1,5 +1,18 @@
 import "./index.css";
-import Button from "./components/button.component";
-import type { ButtonProps } from "./components/button.types";
+import Accordion from "./components/accordion.component";
+import AccordionItem from "./components/accordion-item.component";
+import type {
+  AccordionType,
+  SelectMode,
+  AccordionProps,
+  AccordionItemProps,
+} from "./components/accordion.type";
 
-export { Button, ButtonProps };
+export {
+  Accordion,
+  AccordionItem,
+  AccordionType,
+  SelectMode,
+  AccordionProps,
+  AccordionItemProps,
+};
